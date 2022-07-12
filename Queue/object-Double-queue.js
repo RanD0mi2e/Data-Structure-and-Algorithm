@@ -1,4 +1,4 @@
-class DoubleQueue {
+export class DoubleQueue {
   constructor () {
     this.items = {}
     this.lowestCount = 0
@@ -19,7 +19,7 @@ class DoubleQueue {
       this.lowestCount--
       this.items[this.lowestCount] = elem
     } else {
-      for (let i = this.count, i > 0, i--) {
+      for (let i = this.count; i > 0; i--) {
         this.items[i] = this.items[i - 1]
       }
       this.count++
